@@ -5,7 +5,7 @@ set -e
 IMAGE="php:7.1-rc"
 
 
-# Setup volume mounts for compose config and context
+# Setup volume mounts
 if [ "$(pwd)" != '/' ]; then
     VOLUMES="-v $(pwd):$(pwd)"
 else
@@ -21,4 +21,4 @@ if [ -t 0 ]; then
     RUN_OPTIONS="$RUN_OPTIONS -i"
 fi
 
-exec docker run --rm $RUN_OPTIONS $VOLUMES -w "$(pwd)" $IMAGE php "$@"
+exec docker run --user=$UID --rm $RUN_OPTIONS $VOLUMES -w "$(pwd)" $IMAGE php "$@"
