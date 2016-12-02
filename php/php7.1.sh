@@ -21,4 +21,4 @@ if [ -t 0 ]; then
     RUN_OPTIONS="$RUN_OPTIONS -i"
 fi
 
-exec docker run --rm $RUN_OPTIONS $VOLUMES -w "$(pwd)" $IMAGE "$@"
+exec docker run --rm $RUN_OPTIONS $VOLUMES -w "$(pwd)" $IMAGE php "$@"
