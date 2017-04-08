@@ -27,3 +27,9 @@ chmod +x /usr/local/bin/php7
 curl https://raw.githubusercontent.com/bjoernHeneka/bins-in-docker/master/php/php7-symfony-fpm.sh > /usr/local/bin/php7-symfony-fpm
 chmod +x /usr/local/bin/php7-symfony-fpm
 ```
+
+#### Install gradle:alpine
+```bash
+curl https://raw.githubusercontent.com/bjoernHeneka/bins-in-docker/master/gradle/gradle.sh > /usr/local/bin/gradle
+chmod +x /usr/local/bin/gradle
+```
